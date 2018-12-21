@@ -27,22 +27,22 @@ html section button:active, body section button:active {
   box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
 }
 html section button.lined.thick, body section button.lined.thick {
-  border: solid 7px #41403e;
+  border: solid 7px rgba(82,80, 75, .8);
 }
 html section button.dotted.thick, body section button.dotted.thick {
-  border: dotted 5px #41403e;
+  border: dotted 5px rgba(82,80, 75, .8);
 }
 html section button.dashed.thick, body section button.dashed.thick {
-  border: dashed 5px #41403e;
+  border: dashed 5px rgba(82,80, 75, .8);
 }
 html section button.lined.thin, body section button.lined.thin {
-  border: solid 2px #41403e;
+  border: solid 2px rgba(82,80, 75, .8);
 }
 html section button.dotted.thin, body section button.dotted.thin {
-  border: dotted 2px #41403e;
+  border: dotted 2px rgba(82,80, 75, .8);
 }
 html section button.dashed.thin, body section button.dashed.thin {
-  border: dashed 2px #41403e;
+  border: dashed 2px rgba(82,80, 75, .8);
 }
 @media (max-width: 620px) {
   body h1 {
