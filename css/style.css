@@ -16,15 +16,19 @@ html section button, body section button {
   background: transparent;
   padding: 1rem 1rem;
   margin: 0 1rem;
-  transition: all 0.1s ease;
+  transition: all 0.1s cubic-bezier(0.33, 1.21, 0.86, 0.85);
   font-size: 2rem;
   letter-spacing: 1px;
   outline: none;
-  box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, .2);
+  box-shadow: 19px 19px 29px -16px rgba(0, 0, 0, .2);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 html section button:active, body section button:active {
   box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
+
+}
+html section button:hover, body section button:hover {
+	filter: brightness(96%);
 }
 html section button.lined.thick, body section button.lined.thick {
   border: solid 7px rgba(82,80, 75, .8);
