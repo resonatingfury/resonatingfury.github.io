@@ -17,8 +17,6 @@ html section button, body section button {
   padding: 1rem 1rem;
   margin: 0 1rem;
   transition: all 0.25s cubic-bezier(0.33, 1.21, 0.86, 0.85);
-  font-size: 2rem;
-  letter-spacing: 1px;
   outline: none;
   box-shadow: 19px 19px 29px -16px rgba(0, 0, 0, .2);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -28,15 +26,15 @@ html section button:hover, body section button:hover {
 
 }
 html section button:active, body section button:active {
-	filter: brightness(80%);
+	filter: invert(1);
 }
-html section button.lined.thick, body section button.lined.thick {
+html section button.lined.thicc, body section button.lined.thicc {
   border: solid 7px rgba(82,80, 75, .8);
 }
-html section button.dotted.thick, body section button.dotted.thick {
+html section button.dotted.thicc, body section button.dotted.thicc {
   border: dotted 5px rgba(82,80, 75, .8);
 }
-html section button.dashed.thick, body section button.dashed.thick {
+html section button.dashed.thicc, body section button.dashed.thicc {
   border: dashed 5px rgba(82,80, 75, .8);
 }
 html section button.lined.thin, body section button.lined.thin {
