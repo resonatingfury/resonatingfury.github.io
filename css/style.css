@@ -1,5 +1,6 @@
 body {
 	background-image: url("../images/background.png");
+	color: rgba(82,80, 75, .8);
 }
 
 .container {
@@ -8,4 +9,53 @@ body {
 	margin: auto;
 	background-image: url("../images/container_background.jpg");
 	border-radius: 1px;
+}
+
+html section button, body section button {
+  align-self: center;
+  background: transparent;
+  padding: 1rem 1rem;
+  margin: 0 1rem;
+  transition: all 0.1s ease;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, .2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+html section button:active, body section button:active {
+  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
+}
+html section button.lined.thick, body section button.lined.thick {
+  border: solid 7px #41403e;
+}
+html section button.dotted.thick, body section button.dotted.thick {
+  border: dotted 5px #41403e;
+}
+html section button.dashed.thick, body section button.dashed.thick {
+  border: dashed 5px #41403e;
+}
+html section button.lined.thin, body section button.lined.thin {
+  border: solid 2px #41403e;
+}
+html section button.dotted.thin, body section button.dotted.thin {
+  border: dotted 2px #41403e;
+}
+html section button.dashed.thin, body section button.dashed.thin {
+  border: dashed 2px #41403e;
+}
+@media (max-width: 620px) {
+  body h1 {
+    margin-top: 2rem;
+  }
+  body section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  body section button {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
 }
