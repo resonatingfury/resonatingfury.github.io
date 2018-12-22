@@ -4,16 +4,30 @@
 	<head>
 		<title>Custom Pet Portraits</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/custom.js"></script>
 	</head>
 	<body class="container">
-		<header class="header">
+		<header class="header text-center">
+			<div class="title-section">
+				<div class="title">
+					<span>Pet Portraits</span>
+					<span class="addendum">by Sarah Ann Geren</span>
+				</div>
+				<div class="subtitle">
+					Love is Eternal
+				</div>
+			</div>
+
 			<nav class="navbar">
-				<button class="lined thin">home</button>
-				<button class="lined thin">gallery</button>
-				<button class="lined thin">contact</button>
-				<button class="lined thin">about</button>
+				<button id="home" onclick="reformContainer(this.id)" class="lined thin">home</button>
+				<button id="gallery" onclick="reformContainer(this.id)" class="lined thin">gallery</button>
+				<button id="contact" onclick="reformContainer(this.id)" class="lined thin">contact</button>
+				<button id="about" onclick="reformContainer(this.id)" class="lined thin">about</button>
 			</nav>
 		</header>
+
+		<hr class="hr-short">
+		
 		<section>
 			<h1>N A N I ?</h1>
 			<h1>N A N I ?</h1>
