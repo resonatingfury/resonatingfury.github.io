@@ -3,8 +3,13 @@
   src: url("../fonts/Banannie-Regular.otf") format("opentype");
 }
 
+.footer {
+	bottom: 15px;
+	position: absolute;
+}
+
 html {
-	background-image: url("../standard_images/background.png");
+	background-image: url("../images/background.png");
 }
 
 html, button {
@@ -55,7 +60,7 @@ img {
 
 	margin: auto;
 	margin-top: 30px;
-	background-image: url("../standard_images/container_background.jpg");
+	background-image: url("../images/container_background.jpg");
 	border-radius: 1px;
 }
 
