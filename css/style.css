@@ -3,9 +3,11 @@
   src: url("../fonts/Banannie-Regular.otf") format("opentype");
 }
 
-.footer {
+footer {
 	bottom: 15px;
 	position: absolute;
+	
+	margin-right: 15%;
 }
 
 html {
@@ -30,7 +32,6 @@ img {
 #signature {
 	height: 15px;
 	width: 40px;
-	margin-right: 15%;
 }
 
 .addendum {
