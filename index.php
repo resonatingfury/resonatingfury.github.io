@@ -36,11 +36,11 @@
 			<section id="home-content" class="body-content">
 				<div id="slideshow">
 					<div class="image-container col-9 align-center">
-						<img src="images/portraits/portrait_two.png" alt="">
+						<img src="images/portrait_two.png" alt="">
 					</div>
 
 					<div class="image-container col-9 align-center">
-						<img src="images/portraits/portrait_one.png" alt="">
+						<img src="images/portrait_one.png" alt="">
 					</div>
 				</div>
 			</section>

@@ -3,11 +3,9 @@
   src: url("../fonts/Banannie-Regular.otf") format("opentype");
 }
 
-footer {
-	bottom: 15px;
-	position: absolute;
-	
-	margin-right: 15%;
+@font-face {
+	font-family: "PWChalk";
+	src: url("../fonts/PWChalk.ttf") format("truetype");
 }
 
 html {
@@ -23,8 +21,17 @@ img {
 	height: 100%;
 }
 
-#body-content {
-	padding-top: 30px;
+footer {
+	font-family: "PWChalk";
+	color: rgba(255, 229, 207, 0.76);
+	text-shadow: 1px 1px rgba(255,255,255,0.2), -1px -1px rgba(0,0,0,0.5);
+}
+
+footer > span {
+	font-size: 1.2rem;}
+
+.body-content {
+	padding-top: 4%;
 	width: 90%;
 	margin: auto;
 }
@@ -32,6 +39,10 @@ img {
 #signature {
 	height: 15px;
 	width: 40px;
+}
+
+#slideshow {
+	position: relative;
 }
 
 .addendum {
@@ -42,14 +53,33 @@ img {
 	margin: auto;
 }
 .align-right {
-	display: flex;
-	justify-content: flex-end;
+	right: 0;
+	margin-right: 3%;
 }
 
+.body-content {
+	position: relative;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 2%;
+}
+
+
+.col-6 {
+	width: 50%;
+}
 .col-8 {
 	width: 66.6%;
 }
-
+.col-9 {
+	width: 75%;
+}
+.col-12 {
+	width: 100%;
+}
 .container {
 	width: 85%;
 	height: 90%;
@@ -57,12 +87,19 @@ img {
 	font-family: "Banannie-Regular";
 
 	max-width: 600px;
-	min-height: 93vh;
+	min-height: 90vh;
+
+	position: relative;
 
 	margin: auto;
 	margin-top: 30px;
+	margin-bottom: 5px;
 	background-image: url("../images/container_background.jpg");
 	border-radius: 1px;
+}
+
+.hidden {
+	display: none;
 }
 
 .hr-short {
@@ -85,7 +122,6 @@ img {
 
 .subtitle {
 	font-size: 1.2rem;
-	font-style: italic;
 }
 
 .text-center {
