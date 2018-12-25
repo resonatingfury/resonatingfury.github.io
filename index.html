@@ -1,20 +1,4 @@
-<?php
-
-if($_POST["submit"]) {
-    $recipient="furywrites@gmail.com";
-    $subject="Pet portrait inquiry - website contact";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 	<head>
@@ -62,20 +46,7 @@ if($_POST["submit"]) {
 			</section>
 
 			<section id="contact-content" class="body-content">
-				<?=$thankYou ?>
 
-    			<form method="post" action="contact.php">
-        			<label>Name:</label>
-    		    	<input name="sender">
-
-    		    	<label>Email address:</label>
-    		    	<input name="senderEmail">
-
-       		 		<label>Message:</label>
-        			<textarea rows="5" cols="20" name="message"></textarea>
-
-        			<input type="submit" name="submit">
-    			</form>
 			</section>
 
 			<section id="about-content" class="body-content">
