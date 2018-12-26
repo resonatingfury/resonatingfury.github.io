@@ -24,10 +24,10 @@
 				</div>
 
 				<nav class="navbar">
-					<button id="home" onclick="reformContainer(this.id)" class="lined thin">home</button>
-					<button id="gallery" onclick="initiateGallery()" class="lined thin">gallery</button>
-					<button id="contact" onclick="reformContainer(this.id)" class="lined thin">contact</button>
-					<button id="about" onclick="reformContainer(this.id)" class="lined thin">about</button>
+					<button id="home" onclick="reformContainer(this.id)" class="drawn-button lined thin">home</button>
+					<button id="gallery" onclick="initiateGallery()" class="drawn-button lined thin">gallery</button>
+					<button id="contact" onclick="reformContainer(this.id)" class="drawn-button lined thin">contact</button>
+					<button id="about" onclick="reformContainer(this.id)" class="drawn-button lined thin">about</button>
 				</nav>
 			</header>
 
@@ -35,31 +35,70 @@
 
 			<section id="home-content" class="body-content">
 				<div id="slideshow">
-					<div class="image-container col-9 align-center">
+					<div id="slideshow-1" class="image-container col-9 align-center">
 						<img src="images/portraits/portrait_two.PNG" alt="">
 					</div>
 
-					<div class="image-container col-9 align-center">
+					<div id="slideshow-2" class="image-container col-9 align-center hidden">
+						<img src="images/portraits/portrait_three.PNG" alt="">
+					</div>
+
+					<div id="slideshow-3" class="image-container col-9 align-center hidden">
 						<img src="images/portraits/portrait_one.PNG" alt="">
+					</div>
+
+					<div id="slideshow-4" class="image-container col-9 align-center hidden">
+						<img src="images/portraits/portrait_four.PNG" alt="">
 					</div>
 				</div>
 			</section>
 
 			<section id="contact-content" class="body-content">
+				<div class="standard-text">
+					If you'd like to have me draw one of your beloved pets, or would like to inquire about pricing, send me an email below and I'll get back to you when I can!
+				</div>
 
+				<div class="standard-text">
+					Please bear in mind before reaching out that comissions take an extensive amount of time. A fifty percent downpayment will be required upfront, and may take up to a month depending on backlog.
+				</div>
+
+				<form class="contact" action="https://formspree.io/furywrites@gmail.com" method="POST">
+					<input type="text" name="_gotcha" class="hidden">
+  					<input type="text" name="name" placeholder="Name" class="col-6 drawn-input lined thin">
+  					<input type="email" name="_replyto" placeholder="Email address" class="col-6 drawn-input lined thin">
+  					<textarea type="message" placeholder="Say hi!" class="drawn-input lined thin col-12"></textarea>
+  					<input class="drawn-button lined thin col-2" type="submit" value="Send">
+				</form>
 			</section>
 
-			<section id="about-content" class="body-content">
-				Hi! My name is Annie Geren. I like weenies.
+			<section id="about-content" class="body-content standard-text">
+				<div class="reflow-paragraph">
+					<img class="col-3" src="images/ageren.png">
+					<p>Hi! My name is Sarah Ann Geren, but everybody calls me Annie (well, I'm not actually Annie, I'm her website-wizard boyfriend. She has no power here, so I can say whatever I want). Fun fact, this font was created using my real handwriting!</p>
+				</div>
+
+				<p>If there are two things people know about me, it's that I love art and I'm destined to become a crazy cat lady (or, honestly, a crazy spider lady terrifying her poor boyfriend). There's a certain joy that animals bring to our lives, and it's not something that can really be explained with words. Instead, I choose to draw people's beloved pets for them so that, no matter the future, they always have something to remember. Though their flame burns quick, it is searing hot, and the unconditional love a pet holds is something to be cherished forever.</p>
+
+				<p>Thank you for taking the time to visit my site! </p>
 			</section>
 
-			<div class="align-right bottom">
-					<img id="signature" src="images/signature.png" alt="All work owned by Sarah Geren.">
+			<div id="social-media" class="bottom">
+				<a href="https://www.instagram.com/geren_art/">
+					<img class="image-button" src="images/insta_ico.png">
+				</a>
+				<a href="https://www.reddit.com/user/willchangethislater">
+					<img class="image-button" src="images/reddit_ico.png">
+				</a>
+			</div>
+			<div class="align-right bottom">	
+				<img id="signature" src="images/signature.png" alt="All work owned by Sarah Geren.">
 			</div>
 		</div>
 
 		<footer class="text-center">
-			<span>© ALL WORK COPYRIGHT OF SARAH ANN GEREN</span>
+			<span>
+				© ALL WORK COPYRIGHT OF SARAH ANN GEREN
+			</span>
 		</footer>
 	</body>
 </html>

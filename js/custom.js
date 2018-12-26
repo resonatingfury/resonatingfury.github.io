@@ -1,24 +1,36 @@
 function reformContainer(id) {
 	var newContainer = `#${id}-content`;
-	$(".body-content").hide();
-	$(newContainer).show();
+
+	if($(`${newContainer} :not(.hidden)`)) {
+		$(".body-content").hide();
+		$(newContainer).show();
+	}
 }
 
 function initiateGallery() {
-	
+
 }
 
 $(document).ready(function() {
 	$(".body-content:not(:first)").hide();
 
-	$("#slideshow > div:gt(0)").hide();
+	var index = 1;
+	const SLIDESHOW_LENGTH = 4;
 
 	setInterval(function() {
-	  $('#slideshow > div:first')
-	    .fadeOut(1000)
-	    .next()
-	    .fadeIn(1000)
-	    .end()
-	    .appendTo('#slideshow');
-	}, 5000);
+		var to_fade = `#slideshow-${String(index)}`;
+		$(to_fade).fadeOut(800, function() {
+			if(index == SLIDESHOW_LENGTH) {
+				index = 1;
+			}
+			else {
+				index++;
+			}
+
+			to_fade = `#slideshow-${String(index)}`;
+
+			$(to_fade).fadeIn(800);
+
+		});
+	}, 7000);
 });
