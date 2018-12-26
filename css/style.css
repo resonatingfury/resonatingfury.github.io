@@ -152,6 +152,7 @@ form > textarea {
 	align-self: center;
 	vertical-align: middle;
   	outline: none;
+  	opacity: 80%;
 }
 
 .navbar {
