@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 		<script type="text/javascript" src="js/custom.js"></script>
+
+		<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
 	</head>
 
 	<body>
@@ -93,6 +95,25 @@
 			<div class="align-right bottom">	
 				<img id="signature" src="images/signature.png" alt="All work owned by Sarah Geren.">
 			</div>
+
+			<div id="gallery-book" class="flipbook-viewport hidden">
+				<div class="flipbook-container">
+					<div class="flipbook">
+						<div style="background-image:url(pages/1.jpg)"></div>
+						<div style="background-image:url(pages/2.jpg)"></div>
+						<div style="background-image:url(pages/3.jpg)"></div>
+						<div style="background-image:url(pages/4.jpg)"></div>
+						<div style="background-image:url(pages/5.jpg)"></div>
+						<div style="background-image:url(pages/6.jpg)"></div>
+						<div style="background-image:url(pages/7.jpg)"></div>
+						<div style="background-image:url(pages/8.jpg)"></div>
+						<div style="background-image:url(pages/9.jpg)"></div>
+						<div style="background-image:url(pages/10.jpg)"></div>
+						<div style="background-image:url(pages/11.jpg)"></div>
+						<div style="background-image:url(pages/12.jpg)"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<footer class="text-center">
@@ -100,5 +121,16 @@
 				© ALL WORK COPYRIGHT OF SARAH ANN GEREN
 			</span>
 		</footer>
+
+		<script type="text/javascript">			
+			// Load the HTML4 version if there's not CSS transform
+
+			yepnope({
+				test : Modernizr.csstransforms,
+				yep: ['js/turn.min.js'],
+				nope: ['js/turn.html4.min.js'],
+				both: ['css/basic.css'],
+			});
+		</script>
 	</body>
 </html>

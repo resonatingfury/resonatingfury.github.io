@@ -8,7 +8,9 @@ function reformContainer(id) {
 }
 
 function initiateGallery() {
-
+	//make book come up
+	$("#gallery-book").show();
+	loadFlipbook();
 }
 
 $(document).ready(function() {
@@ -34,3 +36,49 @@ $(document).ready(function() {
 		});
 	}, 7000);
 });
+
+function loadFlipbook() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:922,
+			
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+
+			display: 'single',
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+
+	$(window).width(function(){
+  		var win = $(this); //this = window
+  		var width = win.width();
+  		var height = win.height();
+
+  		$('.flipbook').turn('size', $(".container").width(), $(".container").height());
+	});
+	$(window).resize(function(){
+  		var win = $(this); //this = window
+  		var width = win.width();
+  		var height = win.height();
+
+  		$('.flipbook').turn('size', $(".container").width(), $(".container").height());
+  	});
+
+}

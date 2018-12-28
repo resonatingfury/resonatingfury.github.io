@@ -121,7 +121,10 @@ form > textarea {
 	max-width: 600px;
 	min-height: 90vh;
 
+
 	position: relative;
+
+	text-shadow: 1px 1px rgba(255, 255, 255, .5) !important;
 
 	margin: auto;
 	margin-top: 15px;
