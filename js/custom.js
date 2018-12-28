@@ -1,3 +1,5 @@
+var BOOK_LOADED = false;
+
 function reformContainer(id) {
 	var newContainer = `#${id}-content`;
 
@@ -10,8 +12,10 @@ function reformContainer(id) {
 function initiateGallery() {
 	//make book come up
 	$("#gallery-book").show();
-	window.history.pushState(null, null, 'gallery');
-	loadFlipbook();
+	//window.history.pushState(null, null, 'gallery');
+	if (!BOOK_LOADED) {
+		loadFlipbook();
+	}
 }
 
 $(document).ready(function() {
@@ -40,6 +44,8 @@ $(document).ready(function() {
 });
 
 function loadFlipbook() {
+
+	BOOK_LOADED = true;
 
 	// Create the flipbook
 
