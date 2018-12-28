@@ -10,6 +10,7 @@ function reformContainer(id) {
 function initiateGallery() {
 	//make book come up
 	$("#gallery-book").show();
+	window.history.pushState(null, null, 'gallery');
 	loadFlipbook();
 }
 
@@ -35,6 +36,8 @@ $(document).ready(function() {
 
 		});
 	}, 7000);
+
+	$()
 });
 
 function loadFlipbook() {
