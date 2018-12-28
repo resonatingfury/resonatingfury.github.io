@@ -83,4 +83,11 @@ function loadFlipbook() {
   		$('.flipbook').turn('size', $(".container").width(), $(".container").height());
   	});
 
+	window.addEventListener('popstate', function(e) {
+  		var character = e.state;
+
+  		if (character == null) {
+			$("#gallery-book").hide();
+  		} 
+	});
 }
