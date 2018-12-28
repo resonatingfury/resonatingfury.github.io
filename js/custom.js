@@ -37,7 +37,6 @@ $(document).ready(function() {
 		});
 	}, 7000);
 
-	$()
 });
 
 function loadFlipbook() {
