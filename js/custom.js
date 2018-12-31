@@ -12,7 +12,7 @@ function reformContainer(id) {
 function initiateGallery() {
 	//make book come up
 	$("#gallery-book").show();
-	//window.history.pushState(null, null, 'gallery');
+	window.history.pushState(null, null, 'gallery');
 	if (!BOOK_LOADED) {
 		loadFlipbook();
 	}
