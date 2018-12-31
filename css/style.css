@@ -302,11 +302,17 @@ input, textarea::-moz-placeholder {
   .standard-text {
   	font-size: 4.5vw;
   }
+  .image-button {
+  	height: 6vw;
+  	width: 6vw;
+  }
+  footer span {
+  	font-size: 3.5vw;
+  }
 }
 
 @media screen and (min-width: 601px) {
 	.container {
 		max-width: 600px;
-		min-height: 90vh;
 	}
 }
