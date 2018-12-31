@@ -12,7 +12,7 @@ function reformContainer(id) {
 function initiateGallery() {
 	//make book come up
 	$("#gallery-book").show();
-	window.history.pushState(null, null, 'gallery');
+	//window.history.pushState(null, null, 'gallery');
 	if (!BOOK_LOADED) {
 		loadFlipbook();
 	}
@@ -46,8 +46,15 @@ $(document).ready(function() {
 function loadFlipbook() {
 
 	BOOK_LOADED = true;
+	var BOOK_EXPANDED = false;
 
 	// Create the flipbook
+
+	var display_type = "single";
+	if ($(window).width() > 1200) {
+		display_type = "double";
+		BOOK_EXPANDED = true;
+	}
 
 	$('.flipbook').turn({
 			// Width
@@ -62,7 +69,7 @@ function loadFlipbook() {
 
 			elevation: 50,
 
-			display: 'single',
+			display: display_type,
 			
 			// Enable gradients
 
@@ -74,19 +81,53 @@ function loadFlipbook() {
 
 	});
 
-	$(window).width(function(){
+	if ($(window).width()) {
   		var win = $(this); //this = window
   		var width = win.width();
   		var height = win.height();
 
-  		$('.flipbook').turn('size', $(".container").width(), $(".container").height());
-	});
+  		if (width > 1200) {
+  			$('.flipbook').turn('display', 'double');
+  			$('.flipbook').turn('size', 2*$(".container").width(), $(".container").height());
+  			var to_move = $(".container").width()/2;
+			$('.flipbook').animate({
+				'left' : `-=${to_move}` //moves left
+			});
+
+			BOOK_EXPANDED = true;
+  		}
+  		else {
+  			$('.flipbook').turn('display', 'single');
+  			$('.flipbook').turn('size', $(".container").width(), $(".container").height());
+  		}
+	}
+
 	$(window).resize(function(){
   		var win = $(this); //this = window
   		var width = win.width();
   		var height = win.height();
+  		var to_move = $(".container").width()/2;
 
-  		$('.flipbook').turn('size', $(".container").width(), $(".container").height());
+  		if (width > 1200) {
+  			$('.flipbook').turn('size', 2*$(".container").width(), $(".container").height());
+  			if (BOOK_EXPANDED === false) {
+  				$('.flipbook').turn('display', 'double');
+				$('.flipbook').animate({
+					'left' : `-=${to_move}` //moves left
+				});
+				BOOK_EXPANDED = true;
+			}
+  		}
+  		else {
+  			$('.flipbook').turn('size', $(".container").width(), $(".container").height());
+  			if (BOOK_EXPANDED === true){
+  				$('.flipbook').turn('display', 'single');
+  				$('.flipbook').animate({
+					'left' : `+=${to_move}` //moves left
+				});
+				BOOK_EXPANDED = false;
+  			}
+  		}
   	});
 
 	window.addEventListener('popstate', function(e) {
