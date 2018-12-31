@@ -10,6 +10,7 @@
 
 body {
   transition: all 0.35s cubic-bezier(0.33, 1.21, 0.86, 0.85);
+  overflow-x: hidden;
 }
 
 html {

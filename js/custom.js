@@ -12,7 +12,7 @@ function reformContainer(id) {
 function initiateGallery() {
 	//make book come up
 	$("#gallery-book").show();
-	window.history.pushState(null, null, 'gallery');
+	//window.history.pushState(null, null, 'gallery');
 	if (!BOOK_LOADED) {
 		loadFlipbook();
 	}
@@ -22,7 +22,7 @@ $(document).ready(function() {
 	$(".body-content:not(:first)").hide();
 
 	var index = 1;
-	const SLIDESHOW_LENGTH = 4;
+	const SLIDESHOW_LENGTH = $("#slideshow > .image-container").length;
 
 	setInterval(function() {
 		var to_fade = `#slideshow-${String(index)}`;
