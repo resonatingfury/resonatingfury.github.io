@@ -59,11 +59,11 @@ function loadFlipbook() {
 	$('.flipbook').turn({
 			// Width
 
-			width:922,
+			width:$(".container").width(),
 			
 			// Height
 
-			height:600,
+			height:$(".container").height(),
 
 			// Elevation
 
@@ -123,7 +123,7 @@ function loadFlipbook() {
   			if (BOOK_EXPANDED === true){
   				$('.flipbook').turn('display', 'single');
   				$('.flipbook').animate({
-					'left' : `+=${to_move}` //moves left
+					'left' : `0` //moves left
 				});
 				BOOK_EXPANDED = false;
   			}

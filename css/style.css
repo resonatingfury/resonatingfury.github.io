@@ -13,6 +13,16 @@ body {
   overflow-x: hidden;
 }
 
+.body-content::-webkit-scrollbar {
+    width: 2px;
+}
+ 
+.body-content::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 2px;
+}
+
 html {
 	background-image: url("../images/background.png");
 }
@@ -75,11 +85,19 @@ form > textarea {
 
 .body-content {
 	padding-top: 1%;
+
 	width: 85%;
 	height: 60%;
+	max-height: 60%;
+
 	margin: auto;
 	margin-bottom: 7%;
 	position: relative;
+}
+
+.body-content:not(#home-content) {
+	overflow-y: auto;
+	scroll-behavior: smooth;
 }
 
 .bottom {
@@ -115,8 +133,8 @@ form > textarea {
 }
 
 .container {
-	width: 85%;
-	height: 90%;
+	width: 100%;
+	height: 130vw;
 
 	font-family: "Banannie-Regular";
 
@@ -274,14 +292,27 @@ input, textarea::-moz-placeholder {
   padding-left: 2px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px){
+	.body-content {
+  		max-height: 55%;
+  	}
+}
+
+@media screen and (max-width: 540px) {
   body .drawn-button {
     align-self: center;
     margin: 1%;
     font-size: 4vw;
   }
   .container {
-  	width: 100%;
+  	width: 97%;
+  	position: absolute;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+
+  	max-height: 94vh;
   }
   .body-content {
   	width: 90%;
@@ -311,8 +342,9 @@ input, textarea::-moz-placeholder {
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 541px) {
 	.container {
-		max-width: 600px;
+		max-width: 75vh;
+		max-height: 92.5vh;
 	}
 }
