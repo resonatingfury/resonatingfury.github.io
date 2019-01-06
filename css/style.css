@@ -25,6 +25,7 @@ body {
 
 html {
 	background-image: url("../images/background.png");
+	background-position: center;
 }
 
 html, .drawn-button {
@@ -147,22 +148,12 @@ form > textarea {
 	margin-bottom: 5px;
 	background-image: url("../images/container_background.jpg");
 	border-radius: 1px;
+
+	z-index: 1;
 }
 
 .hidden {
 	display: none;
-}
-
-.pencil {
-    display:block;
-    border:0px;
-    height:45px;
-    width: 80%;
-    margin-left: 10%;
-    padding-top: 2%;
-    background-image: url("../images/paraphernalia/pencil.png");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .image-button {
@@ -183,6 +174,18 @@ form > textarea {
 	margin: auto;
 	margin-top: 10px;
 	border: 1px;
+}
+
+.pencil {
+    display:block;
+    border:0px;
+    height:4%;
+    width: 72%;
+    margin-left: 12%;
+    padding-top: 2%;
+    background-image: url("../images/paraphernalia/pencil.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .reflow-paragraph {
@@ -292,6 +295,13 @@ input, textarea::-moz-placeholder {
   padding-left: 2px;
 }
 
+@media screen and (max-width: 420px){
+	.container {
+  		height: 150vw;
+  	}
+}
+
+
 @media screen and (max-width: 450px){
 	.body-content {
   		max-height: 55%;
@@ -305,7 +315,7 @@ input, textarea::-moz-placeholder {
     font-size: 4vw;
   }
   .container {
-  	width: 97%;
+  	width: 96%;
   	position: absolute;
   	top: 50%;
   	-webkit-transform: translateY(-50%);
@@ -346,5 +356,40 @@ input, textarea::-moz-placeholder {
 	.container {
 		max-width: 75vh;
 		max-height: 92.5vh;
+	}
+
+	#eraser {
+		top: 30vh;
+
+	    height:65%;
+	    width: 8%;
+
+	    left: -100px;
+
+	    background-image: url("../images/paraphernalia/eraser.png");
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	}
+	#drawing-case {
+		top: 0;
+
+	    height:80%;
+	    width: 195%;
+
+	    left: 700px;
+
+	    transform: rotate(20deg);
+
+	    background-image: url("../images/paraphernalia/toolkit.png");
+	    background-size: contain;
+	    background-repeat: no-repeat;
+
+	}
+	.table-item {
+		position: absolute;
+		padding: 0;	
+		margin: 0;
+
+		z-index: 0;
 	}
 }
