@@ -88,8 +88,7 @@ form > textarea {
 	padding-top: 1%;
 
 	width: 85%;
-	height: 60%;
-	max-height: 60%;
+	height: 63%;
 
 	margin: auto;
 	margin-bottom: 7%;
@@ -98,6 +97,7 @@ form > textarea {
 
 .body-content:not(#home-content) {
 	overflow-y: auto;
+	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
 
@@ -152,6 +152,19 @@ form > textarea {
 	z-index: 1;
 }
 
+.flipbook-page {
+	font-family: "Banannie-Regular";
+	background-image: url("../images/container_background.jpg");
+	text-shadow: 1px 1px rgba(255, 255, 255, .5) !important;
+}
+
+.flipbook-page > .image-container {
+	padding-top: 7%;
+}
+.flipbook-page > .header {
+	padding-top: 2%;
+}
+
 .hidden {
 	display: none;
 }
@@ -194,6 +207,10 @@ form > textarea {
 
 .reflow-paragraph > img {
 	margin-right: 3%;
+}
+
+.small {
+	padding-top: 5%;
 }
 
 .standard-text {
@@ -295,16 +312,15 @@ input, textarea::-moz-placeholder {
   padding-left: 2px;
 }
 
-@media screen and (max-width: 420px){
-	.container {
-  		height: 150vw;
-  	}
-}
-
-
 @media screen and (max-width: 450px){
 	.body-content {
-  		max-height: 55%;
+  		max-height: 70%;
+  	}	
+  	.container {
+  		height: 150vw;
+  	}
+  	#home-content {
+  		padding-top: 10vw;
   	}
 }
 
@@ -355,7 +371,11 @@ input, textarea::-moz-placeholder {
 @media screen and (min-width: 541px) {
 	.container {
 		max-width: 75vh;
+		min-width: 430px;
 		max-height: 92.5vh;
+		min-height: 500px;
+	}
+	.body-content {
 	}
 
 	#eraser {
