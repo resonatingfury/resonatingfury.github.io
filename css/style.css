@@ -36,8 +36,11 @@ input.drawn-input {
 	height: 30px;
 }
 
+
 footer > span {
 	font-size: 1.2rem;
+	vertical-align: baseline;
+	margin: auto;
 }
 
 form > input, textarea {
@@ -46,6 +49,10 @@ form > input, textarea {
 
 form > textarea {
 	height: 120px;
+}
+
+#copyright {
+	margin: auto;
 }
 
 #signature {
@@ -113,6 +120,9 @@ form > textarea {
 }
 .col-9 {
 	width: 75%;
+}
+.col-10 {
+	width: 83.4%;
 }
 .col-12 {
 	width: 98%;
@@ -316,7 +326,7 @@ input, textarea::-moz-placeholder {
   		height: 150vw;
   	}
   	#home-content {
-  		padding-top: 10vw;
+  		padding-top: 5vw;
   	}
 }
 
@@ -345,6 +355,12 @@ input, textarea::-moz-placeholder {
   .body-content {
   	width: 90%;
   	min-height: 61%;
+  }
+  .small {
+  	padding-top: 2%;
+  }
+  .image-container {
+  	width: 75%;
   }
   .title {
   	font-size: 8vw;
@@ -380,7 +396,7 @@ input, textarea::-moz-placeholder {
 		max-width: 75vh;
 		min-width: 470px;
 		max-height: 97vh;
-		min-height: 520px;
+		min-height: 610px;
 
 		text-shadow: 1px 1px rgba(255, 255, 255, .5) !important;
 	}
