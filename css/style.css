@@ -372,7 +372,7 @@ input, textarea::-moz-placeholder {
 
 @media screen and (min-width: 541px) {
 	html {
-		background-image: url("../images/background.jpg");
+		background-image: url("../images/background.JPG");
 		background-position: center;
 		background-size: 1750px 103vh;
 	}
