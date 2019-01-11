@@ -320,7 +320,7 @@ input, textarea::-moz-placeholder {
 
 @media screen and (max-width: 450px){
 	.body-content {
-  		max-height: 70%;
+  		max-height: 75%;
   	}	
   	.container {
   		height: 150vw;
